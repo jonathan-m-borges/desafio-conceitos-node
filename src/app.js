@@ -12,12 +12,14 @@ const repositories = [];
 function validateRepositoryExist(request, response, next) {
   const { id } = request.params;
   if (!isUuid(id)) {
-    response.status(400).json({ error: 'Invalid Id.' });
+    return response.status(400).json({ error: 'Invalid Id.' });
   }
+
   const repositoryIndex = repositories.findIndex(x => x.id === id);
   if (repositoryIndex < 0) {
-    response.status(400).json({ error: 'Repository not found.' });
+    return response.status(400).json({ error: 'Repository not found.' });
   }
+  
   request.repositoryIndex = repositoryIndex;
   return next();
 }
