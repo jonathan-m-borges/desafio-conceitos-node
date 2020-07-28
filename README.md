@@ -21,7 +21,3 @@ Permite a criação, listagem, atualização e remoção de repositórios além 
 - **`DELETE /repositories/:id`**: A rota deleta o repositório com o `id` presente nos parâmetros da rota;
 
 - **`POST /repositories/:id/like`**: A rota aumenta o número de likes do repositório específico escolhido através do `id` presente nos parâmetros da rota, a cada chamada dessa rota, o número de likes deve ser aumentado em 1;
-
-## Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
